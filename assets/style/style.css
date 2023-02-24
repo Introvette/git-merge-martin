@@ -1,6 +1,7 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Pacifico&family=Tilt+Prism&display=swap');
 
+
 html {
     box-sizing: border-box;
 }
@@ -71,15 +72,29 @@ ul {
     background-color: #767676;
   }
 
+/* HomePage */
+
+.home-container {
+  display: flex;
+  align-items: center;
+
+}
+
+.bng-pics {
+  display: flex;
+  justify-content: center;
+}
+
 
   .bng-container {
     margin-top: 30px;
-    padding: 4rem 8rem;
+    padding: 45px;
+    width: 800px;
     border: 3px solid #c87425;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    text-transform: uppercase;
     letter-spacing: 0.3ch;
     background: #ffffff;
     position: relative;
@@ -95,15 +110,8 @@ ul {
     }
 }
 
-.bride-container img {
-  height: 300px;
-  margin-right: 10px;
-  border-radius: 250px;
-}
-
-.groom-container img {
-  height: 300px;
-  border-radius: 250px;
+.bng-container h1 {
+  text-align: center;
 }
 
 .bride-container h2 {
@@ -116,6 +124,50 @@ ul {
   margin-right: 10px;
 }
 
+.bride-container img {
+  height: 300px;
+  margin-right: 10px;
+  border-radius: 250px;
+}
+
+/* quick reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.img__wrap-bride {
+  position: relative;
+  width: 225px;
+  margin-right: 10px;
+
+}
+
+.img__description-bride {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(254, 255, 255, 0.72);
+  color: #C66E4E;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 250px;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap-bride:hover .img__description-bride {
+  visibility: visible;
+  opacity: 1;
+}
+
 .groom-container h2 {
   font-family: 'Tilt Prism', cursive;
   color: #C66E4E;
@@ -123,4 +175,46 @@ ul {
   background-color: rgba(128, 128, 128, 0.325);
   padding: 8px;
   border-radius: 60px;
+}
+
+.groom-container img {
+  height: 300px;
+  border-radius: 250px;
+}
+
+/* quick reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.img__wrap-groom {
+  position: relative;
+  width: 225px;
+
+}
+
+.img__description-groom {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(254, 255, 255, 0.72);
+  color: #C66E4E;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 250px;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap-groom:hover .img__description-groom {
+  visibility: visible;
+  opacity: 1;
 }
